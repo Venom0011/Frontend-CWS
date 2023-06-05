@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-md bg-body-tertiary navbar-dark bg-dark">
+<<<<<<< HEAD
   <div class="container-fluid">
     <a class="navbar-brand" routerLinkActive="active" routerLink="/admin-page">AdminPanel</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -110,3 +111,35 @@
   
   </div>
 </div>
+=======
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLinkActive="active" routerLink="/admin-page">AdminPanel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/payments">Payment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" href="#">Orders</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLinkActive="active" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              GetAll
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLinkActive="active"  routerLink="/user-list">User</a></li>
+              <li><a class="dropdown-item" routerLinkActive="active" routerLink="/wash-package">WashPackage</a></li>
+              <li><a class="dropdown-item" routerLinkActive="active" routerLink="/addon-package">Addon</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button *ngIf="isLoggedIn()" class="btn btn-outline-success" (click)="logout()">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+>>>>>>> 0f124b59fb2ead1ed96a7d7628cd8decbb9d776a
