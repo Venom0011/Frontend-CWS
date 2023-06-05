@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SignupserviceService } from '../Services/signupservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'cws-adminpage',
@@ -10,7 +11,8 @@ export class AdminpageComponent {
   isLoggedIn(){
     return !!this.getAccessToken();
   }
-  constructor(private signupservice:SignupserviceService){}
+  constructor(private signupservice:SignupserviceService,
+              private router:Router){}
   
   
   logout(){
@@ -18,5 +20,8 @@ export class AdminpageComponent {
   }
   getAccessToken(){
     return localStorage.getItem('token');
+  }
+  isAdminPage(){
+    return this.router.url=='/admin-page';
   }
 }
